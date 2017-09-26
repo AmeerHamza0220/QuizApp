@@ -1,10 +1,11 @@
 package com.example.lablnet.quizapp;
 
 /**
- * Created by lablnet on 9/23/2017.
+ * Model Class
  */
 
 public class Question_Data {
+
     public String mQuestion, opt1, opt2, opt3, mAnswer;
 
     public Question_Data(String mQuestion, String opt1, String opt2, String opt3, String mAnswer) {

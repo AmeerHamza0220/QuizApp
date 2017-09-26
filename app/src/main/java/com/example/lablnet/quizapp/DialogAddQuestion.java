@@ -12,7 +12,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+/* This is a dialog
+   which allow user to add more questions
+ */
 
 public class DialogAddQuestion extends DialogFragment implements View.OnClickListener {
    Button btnSubmit;
@@ -25,7 +27,7 @@ public class DialogAddQuestion extends DialogFragment implements View.OnClickLis
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Dialog dialog= super.onCreateDialog(savedInstanceState);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);//hide the title
         return dialog;
     }
 
@@ -55,6 +57,7 @@ public class DialogAddQuestion extends DialogFragment implements View.OnClickLis
         String option2=edtOption2.getText().toString();
         String option3=edtOption3.getText().toString();
         String answer=edtAnswer.getText().toString();
+        //Check whether user fill all field
         if(question.equals("")||option1.equals("")||option2.equals("")||option3.equals("")||answer.equals("")){
             Toast.makeText(getActivity(), "Please fill all given field", Toast.LENGTH_SHORT).show();
         }

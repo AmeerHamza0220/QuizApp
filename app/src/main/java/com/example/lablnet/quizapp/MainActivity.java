@@ -9,12 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-List<Question_Data> list;
-    Question_Data data;
-    DatabaseHelper databaseHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,16 +29,19 @@ List<Question_Data> list;
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnCS:
+                //Open quiz activity
                 Intent intent=new Intent(MainActivity.this, QuizActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btnAddQuestion:
+                // Open Dialog to add question
                 DialogFragment dialogFragment=new DialogAddQuestion();
                 dialogFragment.show(getSupportFragmentManager(),"123");
                 break;
 
             case R.id.btnAbout:
                 aboutDialog();
+                //About App
                 break;
         }
     }

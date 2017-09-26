@@ -15,6 +15,7 @@ import java.util.List;
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+    /*This class help to manage Database*/
     public static String dbName="My_Quiz_Database";
     public String tableName="My_Quiz";
     SQLiteDatabase db=getWritableDatabase();

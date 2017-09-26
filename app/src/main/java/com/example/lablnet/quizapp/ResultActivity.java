@@ -18,8 +18,8 @@ RatingBar ratingBar;
         int noOfQuestions=intent.getIntExtra("NoOfQuestions",5);
         ratingBar=(RatingBar)findViewById(R.id.ratingBar);
         txt=(TextView)findViewById(R.id.txtResult);
-        int percentage= (int) (((float)Score/noOfQuestions)*5);
-        ratingBar.setMax(noOfQuestions);
+        int percentage= (int) (((float)Score/noOfQuestions)*5);// For percentage we need float or double data type
+        ratingBar.setMax(noOfQuestions);// set the maximum value of rating bar
         ratingBar.setProgress(Score);
         setScore(Score,gerResult(percentage),noOfQuestions);
     }

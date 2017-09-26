@@ -36,13 +36,11 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-                if (radioButton == null) {
-                    Toast.makeText(QuizActivity.this, "Please select an option!", Toast.LENGTH_SHORT).show();
-                } else {
+                try {
                     String userAnswer = radioButton.getText().toString().replace(" ", "").toLowerCase();
                     data = list.get(question_ID);
                     radioGroup.clearCheck();
-                    if (userAnswer.equals(data.getAnswer().replace(" ", "").toLowerCase())) {
+                    if(userAnswer.equals(data.getAnswer().replace(" ", "").toLowerCase())) {
                         score++;
                     }
                     if (question_ID < 9) {
@@ -55,12 +53,15 @@ public class QuizActivity extends AppCompatActivity {
                         intent.putExtra("NoOfQuestions", question_ID + 1);
                         startActivity(intent);
                     }
+                } catch (Exception e) {
+                    Toast.makeText(QuizActivity.this, "Please select an option!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
     public void setQuestion() {
+        /*question Id is incremented by 1 each time when user click next*/
         data = list.get(question_ID);
         TextView questionView = (TextView) findViewById(R.id.questionView);
         RadioButton opt1 = (RadioButton) findViewById(R.id.opt1);
@@ -74,8 +75,8 @@ public class QuizActivity extends AppCompatActivity {
 
     public void addDataToList() {
         databaseHelper = new DatabaseHelper(this);
-        list=new ArrayList<>();
-        list.clear();
+        list = new ArrayList<>();
+        list.clear(); /*Clear list before adding new data*/
         list = databaseHelper.ReturnList();
     }
 
