@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="8dp"
+    tools:context="com.example.lablnet.quizapp.DialogAddQuestion">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <EditText
+        android:id="@+id/edtQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter Question"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtOption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edtQuestion"
+        android:layout_below="@+id/edtQuestion"
+        android:layout_margin="5dp"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:hint="Option 1"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtOption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edtOption1"
+        android:layout_below="@+id/edtOption1"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Option 2"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtOption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edtOption2"
+        android:layout_below="@+id/edtOption2"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Option 3"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtQuestion"
+        android:layout_below="@+id/edtOption3"
+        android:layout_marginEnd="27dp"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="Correct Answer"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnSubmitQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Button"
+        android:layout_alignEnd="@+id/edtOption3"
+        android:layout_alignStart="@+id/edtAnswer"
+        android:layout_below="@+id/edtAnswer"
+        android:layout_marginTop="42dp"
+        android:text="Submit" />
+</RelativeLayout>

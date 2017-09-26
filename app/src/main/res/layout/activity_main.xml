@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.example.lablnet.quizapp.MainActivity">
+
+
+    <Button
+        android:id="@+id/btnCS"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="Start quiz"
+        android:layout_above="@+id/btnAddQuestion"
+        android:layout_alignStart="@+id/btnAddQuestion"
+        android:layout_marginBottom="62dp" />
+
+    <Button
+        android:id="@+id/btnAddQuestion"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="Add Question"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_below="@+id/btnAddQuestion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:text="About" />
+
+</RelativeLayout>
